@@ -1,0 +1,142 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+:root {
+  --bg-dark: #1e1e1e;
+  --bg-light: #ffffff;
+  --text-dark: #ffffff;
+  --text-light: #1e1e1e;
+  --box-dark: #2b2b2b;
+  --box-light: #f5f5f5;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dark {
+  --bg: var(--bg-dark);
+  --text: var(--text-dark);
+  --box: var(--box-dark);
+}
+
+.light {
+  --bg: var(--bg-light);
+  --text: var(--text-light);
+  --box: var(--box-light);
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+button {
+  font-family: inherit;
+  padding: 10px 16px;
+  background: #444;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: #666;
+}
+
+input[type="text"],
+input[type="date"],
+.search {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: var(--box);
+  color: inherit;
+  transition: border 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+  border-color: #888;
+  outline: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.todo-item {
+  background: var(--box);
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: background 0.3s;
+}
+
+.todo-item label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.note, .date, .created {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-left: 30px;
+}
+
+.filters, .top-controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.stats {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  opacity: 0.75;
+}
+
+.search {
+  margin: 10px 0;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
